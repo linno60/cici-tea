@@ -1,0 +1,55 @@
+.signIn {
+    padding-top: 54px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    .signInContent{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        .title{
+            text-align: center;
+        }
+
+        .signInForm{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+    
+            label {
+                font-size: 1.5rem;
+                margin: 3% 0;
+            }
+    
+            input {
+                height: 3rem;
+            }
+    
+            .signInBtn {
+                margin: 2rem auto;
+                height: 3rem;
+                width: 30%;
+                font-size: large;
+    
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .createAccountLink{
+            color: #14A4F4;
+
+            &:hover{
+                cursor: pointer;
+                color: #673147;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    
+}
