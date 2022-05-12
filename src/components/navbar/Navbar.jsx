@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <nav className='nav'>
             <span className='logo' onClick={() => navigate('/')}>
-                Cici Milk Tea
+                Cici Tea
             </span>
             <ul>
                 <li onClick={() => navigate('/')}>
