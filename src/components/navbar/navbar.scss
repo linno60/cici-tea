@@ -1,0 +1,40 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px;
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+
+    .logo{
+        margin: 1rem;
+        font-size: larger;
+        font-weight: bold;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        position: absolute;
+        right: 5%;
+
+        li{
+
+            span{
+                 margin: 3rem;
+                 font-size: larger;
+                 font-weight: bold;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
