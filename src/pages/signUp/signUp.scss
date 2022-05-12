@@ -1,10 +1,10 @@
-.signIn {
-    padding-top: 54px;
+.signUp{
+    padding: 54px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
 
-    .signInContent{
+    .signUpContent{
         display: flex;
         flex-direction: column;
         width: 30%;
@@ -13,7 +13,7 @@
             text-align: center;
         }
 
-        .signInForm{
+        .signUpForm{
             display: flex;
             flex-direction: column;
             margin: 0 auto;
@@ -29,7 +29,7 @@
                 font-size: 1.5rem;
             }
     
-            .signInBtn {
+            .signUpBtn {
                 margin: 2rem auto;
                 height: 3rem;
                 width: 30%;
@@ -40,17 +40,5 @@
                 }
             }
         }
-
-        .createAccountLink{
-            color: #14A4F4;
-
-            &:hover{
-                cursor: pointer;
-                color: #673147;
-                text-decoration: underline;
-            }
-        }
     }
-
-    
 }

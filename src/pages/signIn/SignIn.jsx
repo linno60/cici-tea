@@ -26,7 +26,7 @@ function SignIn() {
                         Not a member yet?
                         <span
                             className='createAccountLink'
-                            onClick={() => navigate('/signUp')}
+                            onClick={() => navigate('/sign-up')}
                         >
                             &nbsp;Join now!
                         </span>
