@@ -1,13 +1,9 @@
 .home {
     min-height: 100vh;
-    max-width: 100vw;
+    min-width: 100vw;
     background: url('../../assets/images/homepage.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
-
-    .landingImg{
-        size: 100%;
-    }
+    background-size: cover;
 }
 
 

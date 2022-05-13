@@ -14,8 +14,8 @@ function Navbar() {
                 <li onClick={() => navigate('/')}>
                     <span>Home</span>
                 </li>
-                <li onClick={() => navigate('/menu')}>
-                    <span>Menu</span>
+                <li onClick={() => navigate('/order')}>
+                    <span>Online Order</span>
                 </li>
                 <li onClick={() => navigate('/')}>
                     <span>About</span>
