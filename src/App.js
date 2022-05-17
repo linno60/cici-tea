@@ -3,8 +3,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/home/Home'
 import Order from './pages/order/Order';
-import SignIn from './pages/signIn/SignIn';
 import SignUp from './pages/signUp/SignUp';
+import SignIn from './pages/signIn/SignIn';
+import Cart from './components/cart/Cart';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/order' element={<Order />} />
-          <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
         <Navbar />
       </Router>

@@ -1,9 +1,11 @@
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './navbar.scss'
+import { auth } from '../../firebase.config'
 
 function Navbar() {
     const navigate = useNavigate()
-    const location = useLocation()
+
+    const user = auth.currentUser
 
     return (
         <nav className='nav'>
@@ -20,9 +22,16 @@ function Navbar() {
                 <li onClick={() => navigate('/')}>
                     <span>About</span>
                 </li>
-                <li onClick={() => navigate('/sign-in')}>
-                    <span>Sign In</span>
+                <li onClick={() => navigate('/cart')}>
+                    <span>Cart</span>
                 </li>
+                {user ? (
+                    <li></li>
+                ) : (
+                    <li onClick={() => navigate('/sign-in')}>
+                        <span>Sign In</span>
+                    </li>
+                )}
             </ul>
         </nav>
     )

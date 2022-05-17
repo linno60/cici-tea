@@ -1,16 +1,18 @@
 import './signUp.scss'
 import { useState } from 'react'
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 function SignUp() {
     const [formData, setFormData] = useState({
+        name: '',
         email: '',
         password: '',
     })
 
-    const { email, password } = formData
+    const { name, email, password } = formData
 
     const navigate = useNavigate()
 
@@ -25,19 +27,16 @@ function SignUp() {
         e.preventDefault()
 
         try {
-            const auth = getAuth()
-
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 email,
                 password
             )
 
-            const user = userCredential.user
-
             navigate('/')
         } catch (error) {
             toast.error('Sign up failed')
+            console.log(error)
         }
     }
 
@@ -47,6 +46,14 @@ function SignUp() {
                 <h1 className='title'>Sign Up</h1>
 
                 <form onSubmit={onSubmit}>
+                    <label htmlFor='Name'>Name</label>
+                    <input
+                        type='text'
+                        id='name'
+                        value={name}
+                        placeholder='Name'
+                        onChange={onChange}
+                    />
                     <label htmlFor='Email'>Email</label>
                     <input
                         type='text'

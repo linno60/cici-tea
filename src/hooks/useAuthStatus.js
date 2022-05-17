@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import { getAuth, onAuthStatusChanged } from 'firebase/auth'
+import { useState, useEffect, useRef } from 'react'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-const useAuthStatus = () => {
+export const useAuthStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)
     const isMounted = useRef(true)
@@ -9,7 +9,7 @@ const useAuthStatus = () => {
     useEffect(() => {
         if (isMounted) {
             const auth = getAuth()
-            onAuthStatusChanged(auth, (user) => {
+            onAuthStateChanged(auth, (user) => {
                 if (user) {
                     setLoggedIn(true)
                 }
@@ -23,4 +23,3 @@ const useAuthStatus = () => {
 
     return { loggedIn, checkingStatus }
 }
-export default useAuthStatus
