@@ -1,10 +1,11 @@
 import Product from './Product'
-import ProjectData from './ProductData'
+import ProductData from './ProductData'
+import './product.scss'
 
 const Products = () => {
     return (
-        <div>
-            {ProjectData.map((product) => (
+        <div className='productList'>
+            {ProductData.map((product) => (
                 <div key={product.id}>
                     <Product {...product} />
                 </div>

@@ -5,7 +5,7 @@ const Product = ({ id, title, price }) => {
     const dispatch = useDispatch()
 
     return (
-        <div>
+        <div className='productCard'>
             <div>
                 <h3>{title}</h3>
                 <h3>${price}</h3>

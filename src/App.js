@@ -5,7 +5,6 @@ import Home from './pages/home/Home'
 import Order from './pages/order/Order';
 import SignUp from './pages/signUp/SignUp';
 import SignIn from './pages/signIn/SignIn';
-import Cart from './components/cart/Cart';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
           <Route path='/order' element={<Order />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/sign-in' element={<SignIn />} />
-          <Route path='/cart' element={<Cart />} />
         </Routes>
         <Navbar />
       </Router>

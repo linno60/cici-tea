@@ -16,14 +16,11 @@ function Navbar() {
                 <li onClick={() => navigate('/')}>
                     <span>Home</span>
                 </li>
-                <li onClick={() => navigate('/order')}>
-                    <span>Online Order</span>
-                </li>
                 <li onClick={() => navigate('/')}>
                     <span>About</span>
                 </li>
-                <li onClick={() => navigate('/cart')}>
-                    <span>Cart</span>
+                <li onClick={() => navigate('/order')}>
+                    <span>Order Online</span>
                 </li>
                 {user ? (
                     <li></li>

@@ -1,4 +1,11 @@
 .order{
     padding: 70px 10% 0 10%;
     display: flex;
+
+    .products{
+        width: 70%
+    }
+    .cart{
+        width: 30%;
+    }
 }
