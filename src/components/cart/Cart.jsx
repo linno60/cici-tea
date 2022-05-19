@@ -20,6 +20,7 @@ const Cart = () => {
                 ))}
             </div>
             <h2 className='total'>Total: ${totalAmount.toFixed(2)}</h2>
+            <button className='checkOut'>Check Out</button>
         </div>
     )
 }
