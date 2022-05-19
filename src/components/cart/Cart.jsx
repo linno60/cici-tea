@@ -8,7 +8,11 @@ const Cart = () => {
     )
 
     if (quantity === 0) {
-        return <h2>No items in cart...</h2>
+        return (
+            <div className='cartContent'>
+                <h1>No items in cart...</h1>
+            </div>
+        )
     }
 
     return (
