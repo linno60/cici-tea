@@ -6,7 +6,6 @@ function Navbar() {
     const navigate = useNavigate()
 
     const user = auth.currentUser
-    const name = auth.currentUser.displayName
 
     return (
         <nav className='nav'>
@@ -24,7 +23,7 @@ function Navbar() {
                     <span>Order Online</span>
                 </li>
                 {user ? (
-                    <li>{name}</li>
+                    <li></li>
                 ) : (
                     <li onClick={() => navigate('/sign-in')}>
                         <span>Sign In</span>
