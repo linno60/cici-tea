@@ -1,7 +1,8 @@
 import './signUp.scss'
 import { useState } from 'react'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../firebase.config'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { auth, db } from '../../firebase.config'
+import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
@@ -32,6 +33,18 @@ function SignUp() {
                 email,
                 password
             )
+
+            const user = userCredential.user
+
+            updateProfile(auth.currentUser, {
+                displayName: name,
+            })
+
+            const formDataCopy = { ...formData }
+            delete formDataCopy.password
+            formDataCopy.timestamp = serverTimestamp()
+
+            await setDoc(doc(db, 'users', user.uid), formDataCopy)
 
             navigate('/')
         } catch (error) {
